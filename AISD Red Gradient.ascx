@@ -29,7 +29,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	
+
 }
 img {
     	border: medium none;
@@ -39,75 +39,82 @@ img {
 
 <div class="siteWrapper">
 <!-- Start Home -->
-<div class="page_heading home">
+
+<!-- header -->
+<header class="page_heading home">
 	<div class="logo_search">
-    		<div class="Search Right">
-			<dnn:SEARCH runat="server" showweb="False" showsite="False" id="dnnSEARCH" Submit="<button>Search</button>" CssClass="SearchField" />
-		</div>
-    		<h1 class="logo"><img src="<%=SkinPath%>images/logo_txt.png" alt="<%=PortalSettings.PortalName%>">
-		</h1>
+    		<Search class="Search Right">
+						<dnn:SEARCH runat="server" showweb="False" showsite="False" id="dnnSEARCH" Submit="<button>Search</button>" CssClass="SearchField" />
+				</Search>
+    		<h1 class="logo"><img src="<%=SkinPath%>images/logo_txt.png" alt="<%=PortalSettings.PortalName%>"></h1>
 	</div>
-</div>
+</header>
+<!-- end header -->
 
 <!-- Start Content -->
-	<div class="content">
-		<div class="navigation">		
-			<div class="nav">
+	<main class="content">
+
+			<nav class="nav">
 				<div class="menu">
 					<dnn:MENU MenuStyle="Superfish" runat="server" />
 				</div>
-			</div>
-		</div>
-	<div class="BannerDiv">
+			</nav>
+
+	<banner class="BannerDiv">
 		<div id="BannerPane1" class="BannerPane1" runat="server"></div>
 		<div id="BannerPane2" class="BannerPane2" runat="server"></div>
-	</div>
-            		<div id="ContentPaneDiv" class="ContentPaneDiv">
-              			<div id="LeftPane" class="LeftPane Left" runat="server"></div>
-              				<div id="InsideContentPane" class="InsideContentPane">
-					<div id="ContentPane" class="ContentPane Right" runat="server"></div>
-						<div id="SubContentPaneDiv" class="SubContentPaneDiv">
-							<div id="SubContentPane" class="SubContentPane Left" runat="server"></div>
-							<div id="SubRightPane" class="SubRightPane Right" runat="server"></div>
-						</div>
-						<div id="ContentPane2" class="ContentPane2 Right" runat="server"></div>
-						<div id="SubContentPane2Div" class="SubContentPane2Div">
-							<div id="SubContentPane2" class="SubContentPane2 Left" runat="server"></div>
-							<div id="SubRightPane2" class="SubRightPane2 Right" runat="server"></div>
-						</div>
-					</div>
-				</div>
-            		
-            		<div id="ContentPane3Div" class="ContentPane3Div">
-              			<div id="LeftPane3" class="LeftPane3 Left" runat="server"></div>
-              			<div id="ContentPane3" class="ContentPane3 Left" runat="server"></div>
-              			<div id="RightPane3" class="RightPane3 Right" runat="server"></div>
-           		 </div>
-            		<div id="BottomPane" class="BottomPane Left" runat="server"></div>
+	</banner>
 
-	<div class="BottomDiv">
-      		<div class="footer">
-       			 <div class="termsdiv">
+<!-- Main Page Content -->
+
+	<section id="ContentPaneDiv" class="ContentPaneDiv">
+			<!-- Left Pane -->
+				<aside id="LeftPane" class="LeftPane Left" runat="server">
+				</aside>
+			<!-- Main Content Section -->
+				<section id="InsideContentPane" class="InsideContentPane">
+						<!-- Content Pane -->
+							<pane id="ContentPane" class="ContentPane Right" runat="server"></pane>
+						<!-- Sub Content 1 -->
+							<section id="SubContentPaneDiv" class="SubContentPaneDiv">
+								<pane id="SubContentPane" class="SubContentPane Left" runat="server"></pane>
+								<pane id="SubRightPane" class="SubRightPane Right" runat="server"></pane>
+							</section>
+						<!-- Content Pane 2 -->
+							<pane id="ContentPane2" class="ContentPane2 Right" runat="server"></pane>
+						<!-- Sub Content 2 -->
+							<section id="SubContentPane2Div" class="SubContentPane2Div">
+								<pane id="SubContentPane2" class="SubContentPane2 Left" runat="server"></pane>
+								<pane id="SubRightPane2" class="SubRightPane2 Right" runat="server"></pane>
+							</section>
+				</section>
+			<!-- end Main Content Section -->
+	</section>
+
+			<!-- Three Column Content Section -->
+	<section id="ContentPane3Div" class="ContentPane3Div">
+			<pane id="LeftPane3" class="LeftPane3 Left" runat="server"></pane>
+			<pane id="ContentPane3" class="ContentPane3 Left" runat="server"></pane>
+			<pane id="RightPane3" class="RightPane3 Right" runat="server"></pane>
+	 </section>
+	 		<!-- end Three Column Content Section -->
+
+			<!-- Bottom Pane (Full Width) -->
+			<pane id="BottomPane" class="BottomPane Left" runat="server"></pane>
+
+<!-- end Main Page Content -->
+
+<!-- Footer -->
+	<footer class="BottomDiv">
+       			 <section class="termsdiv footer">
           				<dnn:TERMS runat="server" id="dnnTERMS" Text="Terms" CssClass="terms" />
           				<dnn:PRIVACY runat="server" id="dnnPRIVACY"  CssClass="terms" />
           				<dnn:USER runat="server" ID="dnnUSER" CssClass="login" />
           				<dnn:LOGIN runat="server" ID="dnnLOGIN" CssClass="login" />
-        			</div>
-        			<div class="copyrightdiv">Copyright &copy;
+        			</section>
+        			<section class="copyrightdiv footer">Copyright &copy;
           				<dnn:CURRENTDATE runat="server" id="dnnCURRENTDATE2" CssClass="copyright" DateFormat="yyyy" />
           				<dnn:COPYRIGHT runat="server" id="dnnCOPYRIGHT" CssClass="copyright" />
-        			</div>
-      		</div>			
-	</div>
+        			</section>
+	</footer>
 </div>
-</div>
-</div>
-	
-
-
-
-
-
-
-
-
